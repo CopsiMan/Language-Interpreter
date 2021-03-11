@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="892.0" prefWidth="1245.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="14.0" layoutY="59.0" text="Active Program States" />
+      <Label layoutX="446.0" layoutY="31.0" text="Heap Table" />
+      <Label layoutX="764.0" layoutY="36.0" prefHeight="26.0" prefWidth="77.0" text="Output" />
+      <Label layoutX="764.0" layoutY="393.0" prefHeight="26.0" prefWidth="77.0" text="File Table" />
+      <Label layoutX="14.0" layoutY="14.0" prefHeight="26.0" prefWidth="217.0" text="Number of Active Program States" />
+      <ListView id="programs list" fx:id="program_states_list" layoutX="14.0" layoutY="77.0" prefHeight="279.0" prefWidth="228.0" />
+      <TableView id="heap table" fx:id="heapTable" layoutX="355.0" layoutY="77.0" prefHeight="200.0" prefWidth="326.0">
+        <columns>
+          <TableColumn fx:id="heap_table_address" prefWidth="84.0" text="Address" />
+          <TableColumn fx:id="heap_table_value" prefWidth="139.0" text="Value" />
+        </columns>
+      </TableView>
+      <ListView fx:id="outputList" layoutX="696.0" layoutY="92.0" prefHeight="279.0" prefWidth="228.0" />
+      <TableView id="symbol table" fx:id="symbol_table" layoutX="357.0" layoutY="446.0" prefHeight="200.0" prefWidth="314.0">
+         <columns>
+            <TableColumn fx:id="symbol_table_variable" prefWidth="94.0" text="Variable" />
+            <TableColumn fx:id="symbol_table_value" prefWidth="185.0" text="Value" />
+         </columns>
+      </TableView>
+      <Label layoutX="455.0" layoutY="388.0" text="Active Symbol Table" />
+      <ListView fx:id="fileTable" layoutX="696.0" layoutY="440.0" prefHeight="279.0" prefWidth="228.0" />
+      <Label layoutX="24.0" layoutY="410.0" text="Active Execution Stack" />
+      <ListView id="execution stack" fx:id="execution_stack" layoutX="24.0" layoutY="440.0" prefHeight="279.0" prefWidth="228.0" />
+      <Button fx:id="run_button" layoutX="988.0" layoutY="80.0" mnemonicParsing="false" text="Run One Step" />
+      <TextField fx:id="number_of_programs" editable="false" layoutX="224.0" layoutY="13.0" />
+   </children>
+</AnchorPane>
